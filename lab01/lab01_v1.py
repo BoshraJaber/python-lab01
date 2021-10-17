@@ -18,15 +18,15 @@ class menu:
 # creating list       
 list = [] 
 
-list.append( menu('Wings', 0) )
-list.append( menu('Cookies', 0) )
-list.append( menu('Sprin Rolls', 0) )
+list.append( {'Wings', 0} )
+list.append( {'Cookies', 0})
+list.append( {'Sprin Rolls',0} )
 
 
 
 # printing intial values
 for obj in list:
-    print( obj.name, sep =' ' )
+    print( obj )
 
 
 
@@ -35,7 +35,7 @@ print(""" ***********************************
 ***********************************
 """)
 
-exitFlag = True
+exitFlag = False
 # taking user input
 while(exitFlag):
     userChose = str(input("Place your order here or type exit>>  "))
@@ -46,12 +46,9 @@ while(exitFlag):
           obj.number+= 1
           print("** " + str(obj.number)+" order of "+obj.name +" have been added to your meal **")
 
-         if(userChose == 'summary'):
+         if(userChose== 'summary'):
               for obj in list:
                print( obj.name, obj.number, sep =' ' )
-
-
-
 
 
 
